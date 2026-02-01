@@ -5,9 +5,9 @@ import numpy as np
 import sklearn
 import joblib
 from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
 
-client = MongoClient(st.secrets["MONGO_URI"], server_api=ServerApi('1'))
+
+client = MongoClient(st.secrets["MONGO_URI"])
 
 db = client['iris_db_classification']
 collection = db['iris_data']

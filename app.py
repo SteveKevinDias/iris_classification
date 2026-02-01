@@ -55,6 +55,7 @@ def main():
         input_scaled = preprocessing_input_data(input_data, scaler)
         prediction = predict(model, input_scaled)
         input_data['predicted_class'] = classify(prediction[0])
+        input_data['model_used'] = model_name
         collection.insert_one(input_data)
         st.success(f"The Prediction of the flower type based on the model that was is selected is : {classify(prediction[0]).capitalize()}")
 

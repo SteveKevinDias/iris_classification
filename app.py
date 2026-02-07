@@ -39,7 +39,7 @@ def main():
 
     st.write("Select a model and input the features to get the prediction.")
 
-    model_name = st.selectbox("Select Model", ["logistic_model_binary", "logistic_model_multinomial", "logistic_model_ovr","svm_model_binary","svm_model_multi"])
+    model_name = st.selectbox("Select Model", ["logistic_model_binary", "logistic_model_multinomial", "logistic_model_ovr","svm_model_binary","svm_model_multi","decision_tree_model","random_forests_iris_model"])
 
     input_data = {}
     input_data['sepal length (cm)'] = st.number_input("Enter the Sepal Length (cm)", value=0.0)
